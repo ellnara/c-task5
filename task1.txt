@@ -1,0 +1,57 @@
+using System;
+
+namespace task4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(IndexOfMethod("salam",'a',2,4));
+        }
+        static int IndexOfMethod(string word, char letter)
+        {
+           int i = 0;
+           while (i<=word.Length)
+           {
+               if (word[i]!=letter)
+                {
+                    i++;
+                }
+               else
+                {
+                    break;
+                }
+           }
+            return i;
+        }
+        static int IndexOfMethod(string word, char letter, int startindex)
+        {
+            int i = 0;
+            for (i = startindex; i < word.Length; i++)
+            {
+                if (word[i]==letter)
+                {
+                    break;
+                }
+            }
+            return i;
+        }
+        static int IndexOfMethod(string word, char letter, int startindex, int endindex)
+        {
+            int i = 0;
+            for (i = startindex; i <= endindex; i++)
+            {
+                if (word[i]==letter)
+                {
+                    break;
+                }
+            }
+            return i;
+        }
+
+    }
+}
+
+
+
+
